@@ -1,0 +1,446 @@
+ZESTAW 1.
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+Zadanie 0.
+Utwórz katalog roboczy dla wszystkich projektów, które będą realizowane w tym semestrze. Załóż w tym katalogu repozytorium gita. Utwórz projekt o nazwie "svg" zawierający klasę Main z metodą statyczną main. Przetestuj kompilację i uruchomienie.
+Powiąż lokalnie założone repozytorium ze zdalnym (np. na Githubie). Wykonaj commit i push aktualnego stanu projektu.
+
+Zadanie 1.
+Zdefiniuj klasę Point posiadającą dwa publiczne, zmiennoprzecinkowe pola - współrzędne x i y. Ustaw i wyświetl te pola.
+Stwórz bezargumentową metodę toString(), która zwraca informację o współrzędnych punktu za pomocą napisu.
+
+Zadanie 2.
+W klasie Point stwórz bezargumentową metodę toSvg(), która zwróci informację o punkcie sformatowaną tak, aby można ją było wyświetlić w formacie SVG za pomocą niewielkiego okręgu.
+https://www.w3schools.com/graphics/svg_circle.asp
+
+Zadanie 3.
+Napisz publiczną metodę translate(), która przyjmie dwie współrzędne dx i dy i przesunie o te wartości pozycję punktu.
+Napisz publiczną metodę translated(), która przyjmie dwie współrzędne dx i dy, a następnie utworzy nowy punkt, który będzie przesunięty o te wartości w stosunku do pozycji oryginalnego punktu.
+
+Zadanie 4.
+Napisz klasę Segment składającą się z dwóch publicznych obiektów Point. Zdefiniuj w niej metodę length() zwracającą długość odcinka między tymi punktami.
+
+Zadanie 5.
+W klasie Main napisz metodę statyczną, która przyjmie tablicę obiektów Segment i zwróci najdłuższy segment. Następnie przenieś tę metodę do klasy Segment.
+
+
+
+
+
+
+
+
+
+ZESTAW 2.
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 1.
+
+W klasie Point zmień widoczność pól na prywatną. Wygeneruj akcesory i mutatory. Napisz dwa publiczne konstruktory:
+- ustawiający punkt w zadanym położeniu,
+- bezargumentowy, ustawiający punkt w położeniu (0, 0). Zmodyfikuj pozostały kod, żeby dopasować go do wprowadzonych zmian.
+
+
+Zadanie 2.
+Niech klasa Segment posiada dwa prywatne pola Point. Napisz konstruktor który ustawi te pola. Sprawdź wrażliwość odcinka na zmianę współrzędnych punktów, z których został stworzony. Wygeneruj metodę toString() zwracającą informację o punkcie.
+Zmodyfikuj Segment tak, aby był niewrażliwy na zmianę pozycji punktów, z których został stworzony. W tym celu napisz w klasie Point konstruktor kopiujący.
+
+
+Zadanie 3.
+Zdefiniuj klasę Polygon posiadającą prywatną tablicę obiektów Point. Napisz publiczny konstruktor który przyjmie taką tablicę i ustawi ją obiekcie Polygon. Stwórz publiczne metody:
+- toString(), która zwróci informacje o punktach wielokątu,
+- toSvg(), która zwróci opis wielokąta w postaci odpowiednio sparametryzowanego znacznika <polygon>.
+
+
+Zadanie 4.
+
+Zmodyfikuj konstruktor klasy Polygon tak, aby ustawiał w polu obiektu kopię tablicy przekazanej jako argument. Następnie zmodyfikuj go tak, aby tworzył nową tablicę zapełnioną kopiami obiektów Point z oryginalnej tablicy.
+W klasie Polygon napisz konstruktor kopiujący, który wykonuje płytką kopię obiektu. Następnie zmodyfikuj go tak, aby wykonywał głęboką kopię.
+
+
+Zadanie 5.
+
+Zdefiniuj klasę SvgScene. Klasa powinna posiadać prywatną tablicę 3 referencji do obiektów Polygon. Napisz funkcję addPolygon(), która doda przekazaną referencję na obiekt Polygon do tablicy. Jeżeli miejsce się wyczerpie, powinna zacząć nadpisywać wielokąty od początku.
+
+
+Zadanie 6.
+W klasie SvgScene napisz metodę toSvg(), która zwróci napis utworzony z napisów zwracanych przez toSvg() wszystkich wielokątów z tablicy.
+
+
+Zadanie 7.
+
+Zdefiniuj rekord BoundingBox składający się z czterech liczb zmiennoprzecinkowych: położenia x i y lewego górnego punktu prostokątnego obrysu wielokąta, a także szerokości oraz wysokości tego obrysu. W klasie Polygon napisz metodę boundingBox(), która zwróci obiekt BoundingBox opisujący dany wielokąt.
+
+
+Zadanie 8.
+
+W klasie SvgScene napisz metodę save(), która przyjmie ścieżkę do pliku i zapisze tam plik SVG. Rozmiar obrazu w znaczniku <svg> należy obliczyć na podstawie wartości zwracanych przez metody boundingBox() tak, aby obraz zaczynał się w pozycji (0, 0) i by wyświetlone zostały wszystkie wielokąty z tablicy.
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 3
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 1.
+
+W klasie Point zmień widoczność pól na prywatną. Wygeneruj akcesory i mutatory. Napisz dwa publiczne konstruktory:
+- ustawiający punkt w zadanym położeniu,
+- bezargumentowy, ustawiający punkt w położeniu (0, 0). Zmodyfikuj pozostały kod, żeby dopasować go do wprowadzonych zmian.
+
+
+Zadanie 2.
+Niech klasa Segment posiada dwa prywatne pola Point. Napisz konstruktor który ustawi te pola. Sprawdź wrażliwość odcinka na zmianę współrzędnych punktów, z których został stworzony. Wygeneruj metodę toString() zwracającą informację o punkcie.
+Zmodyfikuj Segment tak, aby był niewrażliwy na zmianę pozycji punktów, z których został stworzony. W tym celu napisz w klasie Point konstruktor kopiujący.
+
+
+Zadanie 3.
+Zdefiniuj klasę Polygon posiadającą prywatną tablicę obiektów Point. Napisz publiczny konstruktor który przyjmie taką tablicę i ustawi ją obiekcie Polygon. Stwórz publiczne metody:
+- toString(), która zwróci informacje o punktach wielokątu,
+- toSvg(), która zwróci opis wielokąta w postaci odpowiednio sparametryzowanego znacznika <polygon>.
+
+
+Zadanie 4.
+
+Zmodyfikuj konstruktor klasy Polygon tak, aby ustawiał w polu obiektu kopię tablicy przekazanej jako argument. Następnie zmodyfikuj go tak, aby tworzył nową tablicę zapełnioną kopiami obiektów Point z oryginalnej tablicy.
+W klasie Polygon napisz konstruktor kopiujący, który wykonuje płytką kopię obiektu. Następnie zmodyfikuj go tak, aby wykonywał głęboką kopię.
+
+
+Zadanie 5.
+
+Zdefiniuj klasę SvgScene. Klasa powinna posiadać prywatną tablicę 3 referencji do obiektów Polygon. Napisz funkcję addPolygon(), która doda przekazaną referencję na obiekt Polygon do tablicy. Jeżeli miejsce się wyczerpie, powinna zacząć nadpisywać wielokąty od początku.
+
+
+Zadanie 6.
+W klasie SvgScene napisz metodę toSvg(), która zwróci napis utworzony z napisów zwracanych przez toSvg() wszystkich wielokątów z tablicy.
+
+
+Zadanie 7.
+
+Zdefiniuj rekord BoundingBox składający się z czterech liczb zmiennoprzecinkowych: położenia x i y lewego górnego punktu prostokątnego obrysu wielokąta, a także szerokości oraz wysokości tego obrysu. W klasie Polygon napisz metodę boundingBox(), która zwróci obiekt BoundingBox opisujący dany wielokąt.
+
+
+Zadanie 8.
+
+W klasie SvgScene napisz metodę save(), która przyjmie ścieżkę do pliku i zapisze tam plik SVG. Rozmiar obrazu w znaczniku <svg> należy obliczyć na podstawie wartości zwracanych przez metody boundingBox() tak, aby obraz zaczynał się w pozycji (0, 0) i by wyświetlone zostały wszystkie wielokąty z tablicy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 4
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 1.
+Zdefiniuj klasę Style o finalnych, publicznych polach klasy String: fillColor, strokeColor oraz Double: strokeWidth. Napisz trójargumentowy konstruktor ustawiający te wartości. Napisz publiczną metodę toSvg() zwracającą napis, będący opcją style, którą można umieścić np. w tagu <polygon>.
+
+Zmodyfikuj klasę Polygon dodając do jej konstruktora argument Style i modyfikując jej metodę toSvg(), aby uwzględniała styl. Dopuść możliwość pominięcia stylu przy konstrukcji. Wówczas należy narysować przezroczysty (fillColor) wielokąt, z czarnym obrysem (strokeColor) o grubości jednego piksela (strokeWidth).
+
+Zadanie 2.
+
+Do klasy Segment dodaj publiczne akcesory do punktów.
+Napisz też metodę perpendicular,(), która zwraca Segment prostopadły do tego, na rzecz którego metoda została wywołana. Nowy odcinek powinien być tej samej długości. Istniejący i nowy odcinek powinny przecinać się w swoich środkach.
+Napisz publiczną, statyczną metodę wytwórczą klasy Polygon o nazwie square. Funkcja powinna przyjąć jako argumenty: obiekt Segment, obiekt Style i zwrócić wielokąt będący kwadratem, którego przekątną jest dany odcinek.
+
+Zadanie 3.
+Utwórz klasę abstrakcyjną Shape, która otrzyma jako pole, obiekt klasy Style. Uczyń pole tego obiektu chronionym. Utwórz publiczny konstruktor, który ustawia to pole. Napisz abstrakcyjną metodę toSvg(). Zmodyfikuj klasę Polygon, aby dziedziczyła po klasie Shape.
+
+Zadanie 4.
+Napisz klasę Ellipse dziedziczącą po Shape, posiadającą prywatne pola: środek elipsy (Point), długości promieni i styl. W jej implementacji metody toSvg() powinno znaleźć się rysowanie z użyciem tagu <ellipse>.
+
+Zmodyfikuj klasę SvgScene, aby posiadała tablicę obiektów klasy Shape i korzystając z polimorfizmu zapisz w niej obiekty typu Polygon i Ellipse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 5
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 0.
+
+Zapoznaj się ze zmodyfikowanym projektem. Przeanalizuj zmiany:
+- klasa Point stała się rekordem Vec2,
+
+- klasa Shape stała się interfejsem, usunięte zostały z niej pola,
+- usunięte zostały wszystkie fragmenty kodu związane ze stylem.
+Przetestuj działanie zmodyfikowanego projektu.
+
+Zadanie 1.
+
+Napisz klasę SolidFilledPolygon dziedziczącą po Polygon. Klasa powinna posiadać prywatne pole String color ustawiane, obok tablicy punktów, w konstruktorze. Przemodeluj funkcję toSvg() w interfejsie Shape tak, aby możliwe było przekazanie jej parametru typu String, który zostanie umieszczony w tagu rysowanego obiektu. Wykorzystaj poniższy kod:
+"<polygon points=\"%s\" %s />"
+W klasie SolidFilledPolygon zdefiniuj metodę toSvg, która nadpisze metodę klasy nadrzędnej. Wewnątrz tej metody wywołaj metodę toSvg klasy nadrzędnej, przekazując jej jako parametr napis powstały ze sformatowania:
+"fill=\"%s\" %s "
+kolejno kolorem i parametrem napisowym.
+
+Zastanów się, jakie konsekwencje dla struktury programu miałoby stworzenie analogicznej klasy dziedziczącej po klasie Ellipse oraz próba dodawania innych parametrów do tagu.
+
+
+Zadanie 2.
+
+Zdefiniuj klasę ShapeDecorator implementującą interfejs Shape, która posiadać będzie chronione pole Shape decoratedShape. Pole to powinno być ustawiane w konstruktorze. Nadpisz metodę toSvg w taki sposób, by zawierała wywołanie tej samej metody na rzecz obiektu decoratedShape.
+
+Po klasie ShapeDecorator podziedzicz nową klasę SolidFillShapeDecorator. Klasa ta powinna posiadać prywatne pole String color. W konstruktorze ma przyjmować obiekt klasy Shape oraz kolor wypełnienia typu String. W jej metodzie toSvg wywołaj metodę toSvg na rzecz decoratedShape, z parametrami jak w zadaniu 1.
+
+Utwórz dwa obiekty klasy SolidFillShapeDecorator tak, aby parametrem jednego był obiekt wielokąta, a drugiego elipsy.
+
+Zadanie 3.
+
+Utwórz klasę StrokeShapeDecorator posiadającą prywatne pola String color i double width, które powinny być ustawione w konstruktorze. Wywołaj metodę toSvg podobnie jak w zadaniu 2. formatując napis
+"stroke=\"%s\" stroke-width=\"%f\" "
+kolorem i grubością obrysu. Przetestuj udekorowanie tą klasą obiektów będących wynikiem poprzedniego zadania.
+
+Zadanie 4.
+
+Utwórz klasę TransformationDecorator odpowiadającą za wpisanie w wyświetlany znacznik informacji o przekształceniach afinicznych: translacji, rotacji i skalowaniu. Zdefiniuj w niej prywatne pole transform przechowujące łańcuch instrukcji transformacji.
+
+Wewnątrz tej klasy utwórz publiczną klasę Builder, którego zadaniem będzie budowanie tego łańcucha, a w niej prywatne pole transform - pusty napis.
+
+W klasie Builder zdefiniuj publiczne metody definiujące przekształcenia:
+
+    Builder translate(Vec2 translation),
+    Builder rotate(float angle, Vec2 center),
+    Builder scale(Vec2 scaleFactor).
+
+W klasie Builder napisz metodę build, która przyjmie obiekt Shape i obuduje go dekoratorem TransformationDecorator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 6
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 0.
+
+Utwórz projekt o nazwie genealogy w katalogu repozytorium.
+
+Zadanie 1.
+Zdefiniuj klasę Person posiadającą prywatne pola: imię, nazwisko jako napisy i datę urodzin jako LocalDate. W funkcji main() utwórz listę (List) obiektów Person.
+
+Zadanie 2.
+W klasie Person zdefiniuj prywatny zbiór (Set) children. Napisz metodę adopt(), która przyjmuje osobę (dziecko) przypisuje je do zbioru children swojego obiektu (rodzica). Metoda powinna zwrócić, czy dodanie się powiodło (boolean).
+
+Zadanie 3.
+
+W klasie Person zdefiniuj metodę getYoungestChild(), która zwraca referencję na najmłodsze dziecko swojego obiektu. Jeżeli osoba nie ma dzieci, metoda niech zwróci null.
+
+Zadanie 4.
+Zmodyfikuj klasę Person tak, aby implementowała interfejs Comparable. Osobą wcześniejszą powinna być urodzona wcześniej. Wykorzystaj powstałą funkcjonalność w metodzie getYoungestChild().
+
+Zadanie 5.
+
+W klasie Person zdefiniuj metodę getChildren(), która zwróci listę (List) obiektów children swojego obiektu, posortowaną od najstarszego do najmłodszego. 
+
+Zadanie 6.
+
+Zdefiniuj klasę Family wewnątrz której znajduje się mapa (Map<String, Person>). Kluczem mapy niech będzie napis w postaci imię+’ ’+nazwisko, a wartością, przedstawiająca się w ten sposób osoba. Załóż unikalność nazw osób. W klasie Family napisz metody:
+- add(), która przyjmie osobę i doda ją do rodziny,
+- get(), która przyjmie klucz i zwróci odpowiadający mu obiekt.
+
+Zadanie 7.
+
+Zmodyfikuj metodę add(), aby przyjmowała wariadyczną listę osób i wszystkie te osoby dodawała do rodziny.
+
+Zadanie 8.
+
+Zmodyfikuj mapę osób w klasie Family, aby dopuszczała istnienie wielu nazywających się tak samo osób. W tym celu zmień jej typ na Map<String, List<Person>>. Dostosuj metodę add() do dokonanych zmian. Zmodyfikuj metodę get(), aby zwracała tablicę osób pasujących do klucza, posortowaną od najstarszej do najmłodszej.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 7
+
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Skorzystaj z udostępnionego pliku zawierającego opisy przykładowych osób tworzących ze sobą związki.
+W kolejnych kolumnach pliku opisane są:
+1. imię i nazwisko,
+2. data narodzin,
+3. data śmierci (pusta jeśli żyje),
+4. imię rodzica (puste jeśli nieznany),
+5. imię rodzica (puste jeśli nieznany).
+
+Zadanie 1.
+Zmodyfikuj klasę Person, by uwzględnić datę śmierci. Na tym etapie pomiń tworzenie referencji między obiektami rodziców i dzieci.
+Napisz metodę wytwórczą fromCsvLine() klasy Person przyjmującą jako argument linię opisanego pliku.
+
+Zadanie 2.
+Napisz metodę fromCsv(), która przyjmie ścieżkę do pliku i zwróci listę obiektów typu Person.
+
+Zadanie 3.
+Napisz klasę NegativeLifespanException. Rzuć jej obiekt jako wyjątek, jeżeli data śmierci osoby jest wcześniejsza niż data urodzin. Wywołanie metody getMessage() powinno wyświetlić stosowną informację zawierającą przyczyny rzucenia wyjątku.
+
+Zadanie 4.
+Napisz klasę AmbiguousPersonException. Rzuć jej obiekt jako wyjątek, jeżeli w pliku pojawi się więcej niż jedna osoba o tym samym imieniu i nazwisku. Wywołanie metody getMessage() powinno wyświetlić stosowną informację zawierającą przyczyny rzucenia wyjątku.
+
+Zadanie 5.
+Zmodyfikuj metodę fromCsv(), by w obiektach rodziców ustawiała referencje do obiektów dzieci.
+
+Zadanie 6.
+Napisz klasę ParentingAgeException. Rzuć jej obiekt jako wyjątek, jeżeli rodzic jest młodszy niż 15 lat lub nie żyje w chwili narodzin dziecka. Przechwyć ten wyjątek tak, aby nie zablokował dodania takiej osoby, a jedynie poprosił użytkownika o potwierdzenie lub odrzucenie takiego przypadku za pomocą wpisania znaku “Y” ze standardowego wejścia.
+
+Zadanie 7.
+W klasie Person napisz statyczne metody toBinaryFile i fromBinaryFile, które zapiszą i odczytają listę osób do i z pliku binarnego.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ZESTAW 8
+
+
+Przejdź do głównej zawartości
+Wirtualny Kampus
+
+Laboratorium
+Wymagania zaliczenia
+
+Zadanie 1.
+
+Pobierz aplikację PlantUML. Przetestuj jej działanie z linii komend.
+
+Napisz klasę PlantUMLRunner, posiadającą publiczne statyczne metody:
+- ustawienie ścieżki do uruchamialnego pliku jar.
+- wygenerowanie schematu po przekazaniu: napisu z danymi, ścieżki do katalogu wynikowego i nazwy pliku wynikowego.
+
+Zadanie 2.
+
+W klasie Person napisz bezargumentową metodę, która zwróci napis sformatowany według składni PlantUML. Napis, korzystając z diagramu obiektów, powinien przedstawiać obiekt osoby na rzecz której została wywołana metoda oraz jej rodziców (o ile są zdefiniowani). Obiekty powinny zawierać nazwę osoby. Od dziecka do rodziców należy poprowadzić strzałki.
+
+Zadanie 3.
+
+W klasie Person napisz statyczną metodę, która przyjmie listę osób. Lista powinna zwrócić podobny jak w poprzedni zadaniu napis. Tym razem powinien on zawierać wszystkie osoby w liście i ich powiązania.
+
+Zadanie 4.
+
+W klasie Person napisz statyczną metodę, która przyjmie listę osób oraz napis substring. Metoda powinna zwrócić listę osób z listy wejściowej, ograniczoną do osób, których nazwa zawiera substring.
+
+Zadanie 5.
+
+W klasie Person napisz statyczną metodę, która przyjmie listę osób. Metoda powinna zwrócić listę osób z listy wejściowej, posortowanych według roku urodzenia.
+
+Zadanie 6.
+
+W klasie Person napisz statyczną metodę, która przyjmie listę osób. Metoda powinna zwrócić listę zmarłych osób z listy wejściowej, posortowanych malejąco według długości życia.
+
+Zadanie 7.
+
+W klasie Person napisz statyczną metodę, która przyjmie listę osób. Metoda powinna zwrócić najstarszą żyjącą osobę.
+
+Zadanie 8.
+
+Zmodyfikuj metodę zadania 2. poprzez dodanie do jej argumentów obiektu Function<String, String> postProcess. Funkcja powinna przekształcić wszystkie linie odpowiadające obiektom za pomocą tej funkcji. Przetestuj metodę z dwiema funkcjami: funkcją zmieniającą kolor obiektu na żółty oraz funkcją nie wprowadzającą żadnych zmian.
+
+Zadanie 9.
+
+Zmodyfikuj metodę z poprzedniego zadania poprzez dodanie do jej argumentów obiektu Predicate<Person> condition. Metoda postProcess powinna wywołać się wyłącznie dla osób spełniających warunek condition. Przetestuj metodę z danymi wygenerowanymi w zadaniach 6. i 7.
+
+
